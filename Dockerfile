@@ -29,7 +29,7 @@ COPY scripts/run /etc/service/couchbase-server/run
 
 # Add bootstrap script
 COPY scripts/entrypoint.sh /
-ENTRYPOINT ["scripts/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["couchbase-server"]
 
 EXPOSE 8091 8092 8093 11207 11210 11211 18091 18092
